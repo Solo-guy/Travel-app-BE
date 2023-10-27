@@ -11,12 +11,12 @@ const PlaceSchema = new mongoose.Schema({
     latitude: {type: Number, require: true}, 
     longitude: {type: Number, require: true}, 
 
-    // popular: [
-    //     {
-    //         type: mongoose.Schema.Types.ObjectId,
-    //         ref: "Place"
-    //     }
-    // ]
+    popular: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Place"
+        }
+    ]
 }, {timestamps: true});
 
 module.exports = mongoose.model("Place", PlaceSchema);
